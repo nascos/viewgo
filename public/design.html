@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+    <title>设计</title>
+    <meta charset="utf-8" content="width=device-width, user-scalable=no,height=device-height" allowfullscreen="ture">
+
+
+
+
+    <link href="http://127.0.0.1:3000/mycode/css/nprogress.css" rel="stylesheet">
+    <link  type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link  type="text/css" rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link  type="text/css" rel="stylesheet" href="css/myapp1.css">
+    <link  type="text/css" rel="stylesheet" href="css/design.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var isHiden = true;	/*控制切换菜单*/
+            $('#btop').click(function(){
+                if(isHiden){
+                    $('#popView').animate({top:'+=150px'});//菜单块向右移动
+                }else{
+                    $('#popView').animate({top:'-=150px'}); //菜单块向左移动
+                }
+                isHiden = !isHiden;
+            });
+        });
+        $(document).ready(function(){
+            var isHiden = true;	/*控制切换菜单*/
+            $('#popView2').click(function(){
+                if(isHiden){
+                    $('#popView2').animate({left:'+=10em'});//菜单块向右移动
+                }else{
+                    $('#popView2').animate({left:'-=10em'}); //菜单块向左移动
+                }
+                isHiden = !isHiden;
+            });
+        });
+
+        $(document).ready(function(){
+             var isHiden = true;	//控制切换菜单
+             $('#bbottom').click(function(){
+             if(isHiden){
+                 $('#popView3').animate({top:'+=130px'});//菜单块向移动
+             }else{
+                 $('#popView3').animate({top:'-=130px'}); //菜单块向左移动
+             }
+                 isHiden = !isHiden;
+             });
+         });
+
+    </script>
+    <style>
+
+
+    </style>
+
+    <script type="text/javascript" src="js/jquery-1.10.2.js" ></script>
+    <script type="text/javascript" src="js/tquery-bundle.js"></script>
+    <script type="text/javascript" src="js/threex.domevent.js"></script>
+    <script type="text/javascript" src="js/tquery.domevent.js"></script>
+    <script type="text/javascript" src="js/Tween.js"></script>
+    <script type="text/javascript" src="js/new/CameraContoller.js"></script>
+
+    <script type="text/javascript" src="js/new/worldTool.js"></script>
+    <script type="text/javascript" src="js/new/VgFrame.js"></script>
+    <script type="text/javascript" src="js/new/VgMotion.js"></script>
+    <script type="text/javascript" src="js/new/VgWord.js"></script>
+    <script type="text/javascript" src="js/new/VgVideo.js"></script>
+    <script type="text/javascript" src="js/new/VgImage.js"></script>
+
+
+    <!--<script type="text/javascript" src="js/function.js"></script>-->
+    <!--<script type="text/javascript" src="js/UIButton.js"></script>-->
+
+
+    <script>
+
+    </script>
+
+
+</head>
+
+
+
+
+<body style="margin: 0px; padding: 0px; overflow: hidden; background-image: url(images/galaxy.jpg); background-attachment: fixed; background-origin: padding-box; background-clip: border-box; background-color: rgba(0, 0, 0, 0); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat no-repeat;">
+
+
+<div id="popView" >
+
+    <div class="BUTTON" id="BUTTON">
+        <div class="row-fluid ">
+            <div class="span3 offset2"><!--可能有改动    这一个大块 -->
+                <button id="prevFrame" class="btn btn-large btn-block btn-action">上一帧</button>
+                <button id="currentFrame"  class="btn btn-large btn-block btn-warning">当前帧</button>
+                <button id="nextFrame"  class="btn btn-large btn-block btn-action">下一帧</button>
+                <br>
+            </div>
+            <div class="span3">
+                <button id="fistFrame" class="btn btn-large btn-block btn-success">第一帧</button>
+                <button id="addFrame" class="btn btn-large btn-block btn-info">添加帧</button>
+                <button id="deleteFrame" class="btn btn-large btn-block btn-info">删除帧</button>
+            </div>
+            <div class="span3 ">
+                <button id="freeMode"  class="btn btn-large btn-block  btn-warning">自由模式</button>
+                <button id="scaleUp" class="btn  btn-inverse" style="padding:6px 49px">+</button>
+                <button id="scaleDown" class="btn btn-inverse" style="padding:6px 49px;">-</button>
+            </div>
+        </div><!--可能有改动   截止这里 -->
+        <br>
+        <div id="btop">
+            <i  class="icon-chevron-down" ></i>
+        </div>
+        <!--<img id="backgroundimg" src="js/earthmoonsun-small.jpg" style="display: none">-->
+    </div>
+
+</div>
+
+
+<div id="popView2">
+
+    <div class="todo" style="width:11em;"><!--左粉色导航 -->
+        <ul  style="width:10em;">
+            <li class="todo-done">
+                <a href="#path1">
+                    <div class="todo-content">
+                        <i class="icon-eye-open icon-white "></i>
+                        <span><h4 id="show" class="todo-name">预览</h4></span>
+                    </div>
+                </a>
+            </li>
+            <li><a href="">
+                <div class="todo-content">
+                    <i class="icon-circle-arrow-down icon-white"></i>
+                    <span><h4 id="import"  class="todo-name">导入</h4></span>
+                </div>
+            </a>
+            </li>
+            <li><a href="#">
+                <div class="todo-content">
+                    <i class="icon-edit icon-white"></i>
+                    <span><h4  id="save"  class="todo-name">保存</h4></span>
+                </div>
+            </a>
+            </li>
+            <li><a href="share.html" >
+                <div class="todo-content">
+                    <i class="icon-bookmark icon-white"></i>
+                    <span><h4 id="download" class="todo-name">下载</h4></span>
+                </div>
+            </a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+<div id="popView3">  <!-- 下导航栏 -->
+    <div  class="btn-toolbar" style="margin-top: 3px;">
+        <div id="bbottom" style="width: 100%;margin-top:-13px;margin-bottom: 5px;text-align: center;">
+            <i  class="icon-chevron-up icon-white"></i>
+        </div>
+        <div class="tabbable tabs-left" style="z-index: 1000;">
+            <ul class="nav nav-tabs" >
+                <li ><a href="#A" data-toggle="tab"><h5>T</h5></a></li>
+                <li><a href="#B" data-toggle="tab"><i class="icon-picture"></i></a></li>
+                <li><a href="#C" data-toggle="tab"><i class="icon-film"></i></a></li>
+            </ul>
+            <div class="tab-content">
+
+                 <div class="tab-pane" id="A" >
+                <span >
+                    <textarea id="wordText" cols="45" rows="3" style="overflow: auto;"></textarea>
+                    <button  id="addWord" class="btn" style="padding:3px;">添加</button>
+                </span>
+    	        <span style="display: inline-block;"><!--y -->
+    		
+    		
+                <span class="dropdown dropup">   <!--size -->
+                   <div class="btn-group z-size">
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <h4 style="display:inline;">size</h4>
+                        <span class="caret"></span>
+                        </button>
+                      <ul id="wordSize" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                          <li><a id="minSize" tabindex="-1" value="24" href="#"><h5>小</h5></a></li>
+                          <li><a id="midSize"  tabindex="-1" value="48" href="#"><h4>中</h4></a></li>
+                          <li><a id="maxSize" tabindex="-1" value="72" href="#"><h3>大</h3></a></li>
+                      </ul>
+                    </div><!--btn-group -->
+                </span>  <!--size -->
+
+
+                <span class="dropdown dropup">   <!--color -->
+                      <div class="btn-group">
+                          <input type="color" id="wordColor" class="btn "  value="C" style="width: 1em;margin-bottom: 0;"/>
+                      </div><!--btn-group -->
+                </span>  <!--size -->
+
+                <span class="dropdown dropup" style="margin:auto 8px ;">  <!--font -->
+                    <div class="btn-group z-size">
+
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                              <i class="icon-font"></i>
+                               <span class="caret"></span>
+                        </button>
+
+                        <ul id="wordFont" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+                            <li><a id="songFont" tabindex="-1" value="SimSun"  href="#">宋体</a></li>
+                            <li><a id="liFont" tabindex="-1" value="SimHei" href="#">隶书</a></li>
+                            <li><a id="kaiFont" tabindex="-1" value="KaiTi"  href="#">楷体</a></li>
+                        </ul>
+                        <!--<button class="btn" style=""><h4>中-M</h4></button>
+                        <button class="btn"><h5>小-S</h5></button>-->
+                    </div><!--btn-group -->
+
+                     <span id="wordBold" style="margin:auto 5px ;">  <!--b cu-->
+                          <a class="btn btn-large"><i class="icon-bold"></i></a>
+                     </span>
+                     <span id="wordItalic" style="margin:auto 5px ;">  <!--i xie -->
+                          <a class="btn btn-large"><i class="icon-italic"></i></a>
+                     </span>
+                </span><!--dropdown -->
+                </span>
+            </div><!--A -->
+                <div class="tab-pane" id="B" style="margin:20px auto;">
+                    <span >
+                        <h5 style="display:inline-block;font-size: 16px;">本地文件：</h5>
+                        <input id="selectImage"  class="input-file"  type="file">
+                    </span>
+                    <span>
+                        <div class="form-search" >
+                            <h5 style="display:inline-block">URL：</h5>
+                            <input id="ImageOnLineUrl" type="text" class="input-medium search-query">
+                            <button id="addImage" class="btn">插入</button>
+
+                        </div>
+                    </span>
+                </div><!--B -->
+                <div class="tab-pane" id="C" style="margin:20px auto;">
+                    <span >
+                        <h5 style="display:inline-block;font-size: 16px;">本地文件：</h5>
+                        <input  id="selectVideo" class="input-file"  type="file">
+                    </span>
+                    <span>
+                        <div class="form-search" ><!--span -->
+                        <h5 style="display:inline-block">URL：</h5>
+                        <input id="videoOnLineUrl" type="text" class="input-medium search-query">
+                        <button id="addVideo" class="btn">插入</button>
+                        </div>
+                    </span><!--span-->
+                    <span>
+                        <input id="playBtn" type="button" value="||" /><span>&nbsp</span>
+                        <input id = "timeBtn" class="width:100px,height:20px:" type="range" min="0" value="0"/><span>&nbsp</span>
+                        <input id = "volBtn" class="width:100px,height:20px:" type="range" min="0" max="10" value="5"/>
+                    </span>
+                </div><!--C -->
+            </div><!-- tab-content-->
+        </div>   <!--tabbable  -->
+    </div> <!--btn-toolbar -->
+</div><!-- 下导航栏 -->
+<script>
+
+    var vg = new VG();
+    var world = vg.createWorld();
+    vg.initWorld();
+    vg.addFrame();
+    world.hook(function(){
+        TWEEN.update();
+    });
+
+//    var plane = tQuery.createPlane().addTo(world);
+
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    function initEvent(){
+        $("#fistFrame").on("click",function(){
+            vg.moveFirstFrame();
+        });
+        $("#prevFrame").on("click",function(){
+            vg.movePrevFrame();
+        });
+        $("#currentFrame").on("click",function(){
+            vg.currentFrame.vgMotion.startAnimation();
+        });
+        $("#nextFrame").on("click",function(){
+            vg.moveNextFrame();
+        });
+//        $("#lastFrame").on("click",function(){
+//            vg.moveLastFrame();
+//        });
+           $("#freeMode").on("click",function(){
+                vg.freeMode = !vg.freeMode;
+
+           });
+           $("#addFrame").on("click",function(){
+            vg.addFrame();
+        });
+           $("#deleteFrame").on("click",function(){
+            vg.deleteFrame();
+        });
+        $("#scaleUp").on("click",function(){
+            vg.scaleUp();
+        });
+        $("#scaleDown").on("click",function(){
+            vg.scaleDown();
+        });
+        $("#addWord").on("click",function(){
+            vg.currentFrame.vgMotion.startAnimation();
+            setTimeout(function(){
+                vg.currentFrame.createWord();
+            },1600);
+
+        });
+//
+//        $("#addImage").on("click",function(){
+//            vg.currentFrame.vgMotion.startAnimation();
+//            vg.currentFrame.createImage();
+//        });
+//        $("#addVideo").on("click",function(){
+//            vg.currentFrame.vgMotion.startAnimation();
+//            vg.currentFrame.createVideo();
+//        });
+//
+//        /////////////////////////////////////////////
+//
+//        //info event
+//
+//        document.getElementById("wordText").addEventListener("keyup", function(){
+//
+//            if(vg.currentInfo.type =="word"){
+//                vg.currentFrame.vgWord.update({
+//                    "text": document.getElementById('wordText').value
+//                }, vg.currentInfo);
+//            }
+//        }, false);
+//
+//        $('#wordColor').on('change', function(){
+//            vg.currentFrame.vgWord.update({
+//                "fontColor": document.getElementById('wordColor').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#minSize').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "size": document.getElementById('minSize').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#midSize').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "size": document.getElementById('midSize').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#maxSize').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "size": document.getElementById('maxSize').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#songFont').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "font": document.getElementById('songFont').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#liFont').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "font": document.getElementById('liFont').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#kaiFont').on('click', function(){
+//            vg.currentFrame.vgWord.update({
+//                "font": document.getElementById('kaiFont').value
+//            }, vg.currentInfo)
+//        }, false);
+//        $('#wordBold').on('click', function(){
+//            if(vg.currentInfo.word.fontBold === " ")
+//            {
+//                vg.currentFrame.vgWord.update({
+//                    "fontBold": "bold "
+//                }, vg.currentInfo);
+//            } else {
+//                vg.currentFrame.vgWord.update({
+//                    "fontBold": " "
+//                }, vg.currentInfo);
+//            }
+//        }, false);
+//        $('#wordItalic').on('click', function(){
+//            if(vg.currentInfo.word.fontItalic === " ")
+//            {
+//                vg.currentFrame.vgWord.update({
+//                    "fontItalic": "italic "
+//                }, vg.currentInfo);
+//            } else {
+//                vg.currentFrame.vgWord.update({
+//                    "fontItalic": " "
+//                }, vg.currentInfo);
+//            }
+//        }, false);
+//
+//        //video event listener
+//        $('playBtn').on('click', function(e) {
+//
+//            e.stopPropagation();
+//
+//            if(vg.currentInfo.options.video.paused) {
+//                document.getElementById('playBtn').value = ">";
+//                vg.currentInfo.options.video.play();
+//
+//            }  else {
+//                document.getElementById('playBtn').value = "||";
+//                vg.currentInfo.options.video.pause();
+//
+//            }
+//            console.log(document.getElementById('playBtn').value)
+//
+//        }, false);
+//
+//        $('timeBtn').on('change', function(e) {
+//
+//            e.stopPropagation();
+//
+//            var time = document.getElementById('timeBtn').value;
+//            vg.currentInfo.options.video.currentTime = time;
+//
+//        }, false);
+//
+//        $('volBtn').on('change', function(e) {
+//
+//            e.stopPropagation();
+//
+//            var vol = document.getElementById('volBtn').value/10;
+//            vg.currentFrame.vgVideo.setVolume(vg.currentInfo, vol);
+//
+//        }, false);
+//
+
+
+        $("#addImage").on("click",function(){
+            vg.currentFrame.vgMotion.startAnimation();
+            setTimeout(function(){
+                vg.currentFrame.createImage();
+            },1600);
+
+
+        });
+        $("#addVideo").on("click",function(){
+            vg.currentFrame.vgMotion.startAnimation();
+            setTimeout(function(){
+                vg.currentFrame.createVideo();
+            },1600);
+
+        });
+
+        //text
+        document.getElementById("wordText").addEventListener("keyup", function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "text": document.getElementById('wordText').value
+            }, vg.currentInfo);
+        }, false);
+
+        document.getElementById('wordColor').addEventListener('change', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "fontColor": document.getElementById('wordColor').value
+            }, vg.currentInfo);
+        }, false);
+
+        //minSize,midSize,maxSize is <li> id
+        document.getElementById('minSize').addEventListener('click', function () {
+            console.log("li");
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "size": "24"
+            }, vg.currentInfo);
+        }, false);
+        document.getElementById('midSize').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "size": "48"
+            }, vg.currentInfo);
+        }, false);
+        document.getElementById('maxSize').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "size": "72"
+            }, vg.currentInfo);
+        }, false);
+
+        //songFont,liFont,KaiFont is <li> id
+        document.getElementById('songFont').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "font": "SimSun"
+            }, vg.currentInfo);
+        }, false);
+        document.getElementById('liFont').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "font": "SimHei"
+            }, vg.currentInfo);
+        }, false);
+        document.getElementById('kaiFont').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            vgw.update({
+                "font": "KaiTi"
+            }, vg.currentInfo);
+        }, false);
+
+        document.getElementById('wordBold').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            if (vg.currentInfo.word.fontBold === " ") {
+                vgw.update({
+                    "fontBold": "bold "
+                }, vg.currentInfo);
+            } else {
+                vgw.update({
+                    "fontBold": " "
+                }, vg.currentInfo);
+            }
+        }, false);
+        document.getElementById('wordItalic').addEventListener('click', function() {
+            var vgw = new VG_Word(vg.currentFrame);
+            if (vg.currentInfo.word.fontItalic === " ") {
+                vgw.update({
+                    "fontItalic": "italic "
+                }, vg.currentInfo);
+            } else {
+                vgw.update({
+                    "fontItalic": " "
+                }, vg.currentInfo);
+            }
+        }, false);
+
+        //video event
+        document.getElementById('playBtn').addEventListener('click', function(e) {
+
+            e.stopPropagation();
+
+            if (vg.currentInfo.options.videoDom.paused) {
+                document.getElementById('playBtn').value = ">";
+                vg.currentInfo.options.videoDom.play();
+
+            } else {
+                document.getElementById('playBtn').value = "||";
+                vg.currentInfo.options.videoDom.pause();
+
+            }
+        }, false);
+
+        document.getElementById('timeBtn').addEventListener('change', function(e) {
+
+            e.stopPropagation();
+
+            var time = document.getElementById('timeBtn').value;
+            vg.currentInfo.options.videoDom.currentTime = time;
+        }, false);
+
+        document.getElementById('volBtn').addEventListener('change', function(e) {
+
+            e.stopPropagation();
+
+            var vol = document.getElementById('volBtn').value / 10;
+            vg.currentInfo.options.videoDom.volume = vol;
+        }, false);
+
+
+
+    }
+
+
+    initEvent();
+</script>
+</body></html>

@@ -1,0 +1,152 @@
+body {
+
+}
+
+
+
+.backimg2{
+	margin:0;
+	padding:0;
+	background-image:url(../img/26.jpg) ;
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+
+.navbar .btn-navbar{
+	
+	margin-right: 5px;
+}
+
+.navbar-inverse .brand{
+	margin-left:5px;
+	
+}
+ .navbar-inverse .nav > li{
+ 	margin-left:10px;
+ 	
+ }
+ .navbar-fixed-top{
+ 	margin-left:0;
+ 	margin-right: 0;
+ } 
+    
+.main3{
+	
+	margin:200px auto;
+	
+	max-width:960px;
+}
+
+.main3>.container-fluid{
+	
+	
+}
+.form-horizontal{
+	
+	margin-left:0;
+}
+
+.main3>.container-fluid>.row-fluid> .span5{
+	margin:0 auto 30px;
+	text-align:center;
+}
+
+.span5>img{
+	
+	margin-top:20px;
+	max-width: 15em;
+}
+
+.span5>p{
+	
+	font-size: 20px;
+	color:#2C3E50;
+	font-family: "Segoe Script";
+	word-break:break-all;
+	margin:10px;
+}
+
+
+.main3 .span7{
+	
+	
+		
+	background-color:rgba(255,255,255,0.4);
+	
+	
+}
+
+.main3>.container-fluid>.row-fluid>.span7{
+	
+	padding:20px 0;
+}
+.span7>.form-horizontal>h3{
+	
+	font-family:"LiSu";
+	color:#fff;
+	margin:40px  110px 10px;
+	
+	
+}
+
+
+
+@media (max-width:480px){
+	
+	
+.main3{
+	
+	margin:40px auto;
+	
+	max-width:960px;
+}
+
+
+.span5 img{
+	
+	
+	width: 13em;
+}
+
+.span7{
+	
+	margin:0 auto;
+	padding:20px 0;
+	
+	
+}
+	
+.span7>.form-horizontal{
+	
+	
+	margin:20px;
+	padding: 20px;
+	
+	
+}
+
+
+
+.span7>.form-horizontal>h3{
+	
+	color:#fff;
+	margin:0;
+	
+	
+}
+
+
+
+	
+}
+
+
+
+
+
+
+
+
+
+

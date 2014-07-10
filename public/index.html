@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+  
+    
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.bootcss.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  
+       <meta charset="gb2312" />
+        <title>1</title>    
+       
+       <style>
+       body{
+
+       }
+       	.box{
+       	  display: -moz-box;
+          display: -webkit-box;
+          display: box;
+         -moz-box-orient: horizontal;
+        -webkit-box-orient: horizontal;
+        box-orient: horizontal;
+        background-color:#008080;
+       	}
+       	.box>div{
+       		text-align:left;
+       		background-color:#eee;
+       		margin:10px 10px 10px 0;
+       		
+       	}
+       	.box>div:first-child{
+       		width:200px;
+       		margin-left: 10px;
+       	}
+       	.box>div:nth-child(2),.box>div:nth-child(3){
+       		 -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+          box-flex: 1;
+       	}
+       	
+       	
+       		
+       
+       	  @-webkit-keyframes 'xiao' 
+			{
+                       from { 
+                      opacity: 1;
+           
+                            } 
+     
+             
+            to { 
+                       opacity: 0.2;
+          
+                        } 
+           }
+           #a:hover,#a:focus{
+       			opacity: 1;
+       			-webkit-animation:'xiao' 1s ease-in-out 0.1s  alternate;
+       		}
+       		ul{
+       			max-width:300px;
+       		}
+       		.list-pic,.list-word{
+       		
+       		display:inline;
+       	}
+       	.list-pic{
+       	float:left;}
+       	.list-word{
+       		float:right;
+       		display:table;
+       		
+       	}
+       	.list-pic li{
+       		padding-left:20px;
+       		display: table-cell;
+       	}
+       		.list-word li:nth-child(1){
+       		display: table-cell;
+       	}
+       		.list-word li:nth-child(2)
+       	{
+       		display: table-cell;
+       	}
+       	.list-word li:nth-child(3)
+       	{
+       		display:table-row-group;
+       		width:48px;
+       		
+       	}
+       
+       	
+       		.list-word li:nth-child(4){
+       		
+       	}
+       	
+       	
+       	
+      
+h1{margin:10px 0;font-size:20px;}
+ul{margin:0;padding:0;list-style:none;}
+.table{display:table;border-collapse:collapse;border:1px solid #ccc;}
+.table-caption{display:table-caption;margin:0;padding:0;font-size:16px;}
+.table-column-group{display:table-column-group;}
+.table-column{display:table-column;width:100px;}
+.table-row-group{display:table-row-group;}
+.table-row{display:table-row;}
+.table-row-group .table-row:hover,.table-footer-group .table-row:hover{background:#f6f6f6;}
+.table-cell{display:table-cell;padding:0 5px;border:1px solid #ccc;}
+.table-header-group{display:table-header-group;background:#eee;font-weight:bold;}
+.table-footer-group{display:table-footer-group;}
+</style>
+    
+    </head>
+    <body>
+    	
+    	<div class="box">
+    		<div class="item">colum1</div>
+    		<div class="item">colum2</div>
+    		<div class="item">colum3</div>
+    	</div>
+    	
+  <ul class="list-pic"> 
+  <li> 
+<a href="#"><img width="100" height="100" src="a.jpg "/></a> 
+<p>文字一</p> 
+</li> 
+<li> 
+<a href="#"><img width="100" height="100" src="a.jpg" /></a> 
+<p>文字二</p> 
+</li> 
+</ul> 
+<ul class="list-word"> 
+<li>文字三</li> 
+<li>文字四</li> 
+<li>文字五</li> 
+<li>文字六</li> 
+</ul> 
+
+   <div id="a" style="background-color:#000; width:200px; height:200px;"></div>  
+   
+   
+   
+   
+   <div class="table">
+	<h2 class="table-caption">花名册：</h2>
+	<div class="table-column-group">
+		<div class="table-column"></div>
+		<div class="table-column"></div>
+		<div class="table-column"></div>
+	</div>
+	<div class="table-header-group">
+		<ul class="table-row">
+			<li class="table-cell">序号</li>
+			<li class="table-cell">姓名</li>
+			<li class="table-cell">年龄</li>
+		</ul>
+	</div>
+	<div class="table-footer-group">
+		<ul class="table-row">
+			<li class="table-cell">footer</li>
+			<li class="table-cell">footer</li>
+			<li class="table-cell">footer</li>
+		</ul>
+	</div>
+	<div class="table-row-group">
+		<ul class="table-row">
+			<li class="table-cell">1</li>
+			<li class="table-cell">John</li>
+			<li class="table-cell">19</li>
+		</ul>
+		<ul class="table-row">
+			<li class="table-cell">2</li>
+			<li class="table-cell">Mark</li>
+			<li class="table-cell">21</li>
+		</ul>
+		<ul class="table-row">
+			<li class="table-cell">3</li>
+			<li class="table-cell">Kate</li>
+			<li class="table-cell">26</li>
+		</ul>
+	</div>
+</div>
+	
+</body>

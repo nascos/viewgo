@@ -1,0 +1,327 @@
+
+
+
+body {
+  margin:0; 
+ font-family: "微软雅黑"; 
+}
+/*
+.backcol{
+	width:100%;
+	background-color:#F5F5F5;
+	
+	
+	margin:0;
+	padding:0;
+}
+
+*/
+
+.backimg{
+	width:100%;
+	margin:0;
+	padding:0;
+	background-image:url(../img/GPlay.svg) ;
+	background-size:cover;
+	background-repeat:repeat;
+	
+	
+	
+}
+
+
+/*导航条背景*/
+.navbar-inverse .navbar-inner{
+	background-color:#fff;
+	border-bottom: solid #444 2px;
+	background-image: linear-gradient(to bottom, #fff, #fff);
+	
+}
+
+
+.btn btn-navbar .icon-bar{
+	
+}
+
+/*home背景*/
+.navbar-inverse .nav .active > a{
+	background-color:#2c3e50;
+	color: #fff;
+}
+
+/*home-hover背景*/
+ .navbar-inverse .nav .active > a:hover, 
+.navbar-inverse .nav .active > a:focus {
+    
+    background-color: #EF4E66;
+    }
+  
+ .navbar-fixed-top{
+ 	margin-left:0;
+ 	margin-right: 0;
+ } 
+    
+ /*viewgo-hover背景*/   
+.navbar-inverse .brand:hover, .navbar-inverse .nav > li > a:hover,
+ .navbar-inverse .brand:focus, .navbar-inverse .nav > li > a:focus {
+    color: #3498DB;
+    text-decoration: none;
+     
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+	margin-left:10px;
+color: #999999;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+}
+/*导航变换字体颜色*/ 
+ .navbar-inverse .nav > li > a:hover,
+ .navbar-inverse .nav > li > a:focus
+
+{
+	color:#1abc9c;
+}
+
+
+.avatar{
+	margin: 0px auto;
+	padding:0;
+	width: 100%;
+}
+/*头像背景。很奇怪。换了background-repeat:repeat; 就显示出来了*/
+.avatar .container-fluid{
+	padding:70px 70px;
+	
+}
+.avatar .avatar-download {
+	text-align:center;
+}
+.avatar .avatar-download img{
+	margin:0 auto;
+	max-width: 18%;
+	
+	border: solid 0.7em #f6f5ec;
+   
+	
+}
+
+	 
+	 
+	/*左导航   -个人信息界面                            */  
+	 
+.main{
+	margin:5px auto;
+	padding:0;
+	max-width:960px;
+	
+	
+	}	 
+.todo {
+	
+  background-color:#EF4E66;
+ 
+  margin-bottom: 20px;
+  -webkit-border-radius: 8px 8px 6px 6px;
+  -moz-border-radius: 8px 8px 6px 6px;
+  border-radius: 8px 8px 6px 6px;
+}
+.todo ul {
+  margin: 0;
+  list-style-type: none;
+}
+.todo li {
+ 
+  background-color: #f05b72;
+  background-size: 20px 20px;
+  cursor: pointer;
+  margin-top: 2px;
+  padding: 18px 42px 17px 25px;
+  position: relative;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-backface-visibility: hidden;
+  display: block;
+}
+
+.todo-content {
+	margin:2px auto;
+	margin-left: auto;
+   margin-right: auto;
+   padding: 1px auto;
+  
+   overflow: hidden;
+   text-align: center;
+  
+  
+ }
+.todo-content h4{   /*字间距放大*/  
+	 color: #ffffff;
+	display:inherit;
+	margin:10px 2px;
+	padding-top:2px;
+	
+}
+.todo-name {
+ 
+  font-size: 17px;
+  margin: 1px 0 3px;
+}
+.todo li a {
+	text-decoration: none;
+	
+}
+
+
+
+
+.todo li:first-child {
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius:6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+  padding-bottom: 18px;
+  background-color:#f05b72;
+}
+
+.todo li:nth-of-type(2){  
+	
+	 background-color:#f05b72;
+}
+
+.todo li:nth-of-type(3){  
+	
+	 background-color:#f05b72;
+}
+.todo li:last-child {
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  padding-bottom: 18px;
+  background-color:#f05b72;
+}
+
+.todo li:hover,.todo li :focus{
+	color:#34495E;
+	background-color:#3498DB;
+	
+}
+
+/*个人信息列表*/
+
+.main .container-fluid .row-fluid>.span9{
+	background-color:rgba(255,255,255,0.8);
+
+	margin-top:3px;
+	padding:10px;
+	 -webkit-border-radius: 6px 6px 6px 6px;
+     -moz-border-radius:6px 6px 6px 6px;
+      border-radius: 6px 6px 6px 6px;
+}
+
+
+.form-horizontal{
+	margin-left:10%;
+	
+	color:#444;
+}
+.form-horizontal>.control-group>h4{
+	margin-left:10%;
+	font-size: 1.5em;
+}
+.myinfor{
+	
+	margin:20px 20px;
+	
+	/*个在父块中放置，使子块（n） 水平居中*/
+}
+
+.myinfor>.form-horizontal>.control-group{
+	margin-top:20px;
+}
+.myinfor>.form-horizontal>.control-group>label {
+	font-size: 1.2em;
+    }
+    
+.myinfor>.form-horizontal>.control-group>.controls>p{
+	margin:5px 0 0;
+	font-size: 1.2em;
+}
+
+.main .container-fluid .row-fluid>.la{
+	overflow:hidden;
+      background-color:rgba(238,238,238,0.6);
+	margin-top: 30px;
+}
+
+
+.ba{
+	margin-left:5%;
+	padding-right:30px;
+	
+}
+.ba>li{
+	display:block;
+	cursor:pointer;
+	color:#333;
+	border-bottom: dotted #fff 1px;
+}
+
+
+.ba>h4{
+	
+	margin:7% 10% 5%;
+	font-size: 1.6em;
+	
+}
+
+
+
+.ba>li:hover,.ba>li:focus{
+	
+	background-color:#ccc;
+	-webkit-border-radius: 6px 6px 6px 6px;
+     -moz-border-radius:6px 6px 6px 6px;
+      border-radius: 6px 6px 6px 6px;
+}
+
+
+@media (max-width:767px) { 
+	.avatar .avatar-download img{
+		margin:0 auto;
+	max-width: 50%;
+	border: solid 0.7em #fff;
+	
+	 }
+	 
+	}
+@media (max-width:480px){
+ 
+	.avatar .avatar-download img{
+		margin:0px auto;
+		padding-top:-80px;
+	min-width:60%;
+	border: solid 0.7em #fff;
+	
+	}
+	
+   .main .container-fluid .row-fluid>.span9{
+	background-color:#2980B9;
+    }
+	
+    
+    .form-horizontal{
+	    margin-right:10%;
+	
+	   color:#ECF0F1;
+	   
+	   }
+	 
+.main .container-fluid .row-fluid>.la{
+	overflow:hidden;
+	background-color:#eee;
+}
+
+    }
+	
+	 
